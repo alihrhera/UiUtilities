@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExpandRow">
+
+        <!--   Add View To Hide/Show     -->
+        <attr name="child_id" format="reference" />
+        <!--   Text Size For Title    -->
+        <attr name="titleTextSize" format="dimension" />
+        <!--    began icon      -->
+        <attr name="startIcon" format="reference" />
+        <!--    End Open icon      -->
+        <attr name="endIconOpen" format="reference" />
+        <!--    End Close icon      -->
+        <attr name="endIconClose" format="reference" />
+        <!--    Header Background    -->
+        <attr name="headerBackground" format="reference|color" />
+        <!--    Header Title String    -->
+        <attr name="title" format="string" localization="suggested" />
+
+        <attr name="startIconColor" format="color" />
+        <attr name="endIconColor"   format="color" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="dividerColor"    format="color" />
+
+        <attr name="defaultOpen"    format="boolean" />
+        <attr name="showDivider"    format="boolean" />
+
+        <attr name="clickAnyPositionToOpen" format="boolean" />
+
+
+
+
+    </declare-styleable>
+
+
+</resources>
