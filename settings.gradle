@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "UiUtilities"
 include ':app'
+include ':app:ExpandRow'

@@ -1,4 +1,4 @@
-package com.hrhera.uiutilities;
+package com.hrhera.expandrow;
 
 import android.content.Context;
 import android.content.res.TypedArray;
