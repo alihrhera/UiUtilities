@@ -21,13 +21,15 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+
                 android:id="@+id/start_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/start_icon" />
 
             <TextView
                 android:text="@string/expand_row_title"
@@ -49,7 +51,8 @@
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_open"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/end_icon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
