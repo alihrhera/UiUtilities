@@ -35,33 +35,33 @@ public class ExpandRow extends CardView {
     private float titleTextSize = 14f;
     private String titleText = "Title";
 
-    private int titleTextColor = com.hrhera.expandrow.R.color.black;
-    private int endIconClose   = com.hrhera.expandrow.R.drawable.ic_close;
-    private int endIconOpen    = com.hrhera.expandrow.R.drawable.ic_open;
-    private int endIconColor   = com.hrhera.expandrow.R.color.black;
+    private int titleTextColor = R.color.black;
+    private int endIconClose   = R.drawable.ic_close;
+    private int endIconOpen    = R.drawable.ic_open;
+    private int endIconColor   = R.color.black;
 
-    private int dividerColor = com.hrhera.expandrow.R.color.black;
+    private int dividerColor = R.color.black;
 
 
     private int startIcon = -1;
     private int startIconTint = -1;
 
-    private int headerBackground = com.hrhera.expandrow.R.color.white;
+    private int headerBackground = R.color.white;
 
     private boolean isOpen() {
         return tail.getVisibility() == VISIBLE;
     }
 
     private void createView() {
-        inflate(context, com.hrhera.expandrow.R.layout.extented_row, this);
-        titleView = findViewById(com.hrhera.expandrow.R.id.title);
-        child = findViewById(com.hrhera.expandrow.R.id.childView);
-        tail = findViewById(com.hrhera.expandrow.R.id.tail);
-        line = findViewById(com.hrhera.expandrow.R.id.line);
-        ConstraintLayout header = findViewById(com.hrhera.expandrow.R.id.header);
-        startIconView = findViewById(com.hrhera.expandrow.R.id.start_icon);
+        inflate(context, R.layout.extented_row, this);
+        titleView = findViewById(R.id.title);
+        child = findViewById(R.id.childView);
+        tail = findViewById(R.id.tail);
+        line = findViewById(R.id.line);
+        ConstraintLayout header = findViewById(R.id.header);
+        startIconView = findViewById(R.id.start_icon);
 
-        endIconView = findViewById(com.hrhera.expandrow.R.id.end_icon);
+        endIconView = findViewById(R.id.end_icon);
         endIconView.setOnClickListener(view -> {
             if (isOpen()) {
                 tail.setVisibility(GONE);
@@ -120,22 +120,22 @@ public class ExpandRow extends CardView {
     }
 
     private void createViewWithAttribute(AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, com.hrhera.expandrow.R.styleable.ExpandRow, 0, 0);
-        startIcon = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_startIcon, -1);
-        endIconClose = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_endIconClose, com.hrhera.expandrow.R.drawable.ic_close);
-        endIconOpen = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_endIconOpen, com.hrhera.expandrow.R.drawable.ic_open);
-        titleText = ta.getString(com.hrhera.expandrow.R.styleable.ExpandRow_title);
-        defaultOpen = ta.getBoolean(com.hrhera.expandrow.R.styleable.ExpandRow_defaultOpen, false);
-        titleTextSize = ta.getDimension(com.hrhera.expandrow.R.styleable.ExpandRow_titleTextSize, 14f);
-        childId = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_child_id, -1);
-        endIconOpen = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_endIconOpen, com.hrhera.expandrow.R.drawable.ic_open);
-        dividerColor = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_dividerColor, com.hrhera.expandrow.R.color.black);
-        titleTextColor = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_titleTextColor, com.hrhera.expandrow.R.color.black);
-        startIconTint = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_startIconColor, -1);
-        headerBackground = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_headerBackground, headerBackground);
-        endIconColor = ta.getResourceId(com.hrhera.expandrow.R.styleable.ExpandRow_endIconColor, com.hrhera.expandrow.R.color.black);
-        clickAnyPositionToOpen = ta.getBoolean(com.hrhera.expandrow.R.styleable.ExpandRow_clickAnyPositionToOpen, false);
-        showDivider = ta.getBoolean(com.hrhera.expandrow.R.styleable.ExpandRow_showDivider, true);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ExpandRow, 0, 0);
+        startIcon = ta.getResourceId(R.styleable.ExpandRow_startIcon, -1);
+        endIconClose = ta.getResourceId(R.styleable.ExpandRow_endIconClose, R.drawable.ic_close);
+        endIconOpen = ta.getResourceId(R.styleable.ExpandRow_endIconOpen, R.drawable.ic_open);
+        titleText = ta.getString(R.styleable.ExpandRow_title);
+        defaultOpen = ta.getBoolean(R.styleable.ExpandRow_defaultOpen, false);
+        titleTextSize = ta.getDimension(R.styleable.ExpandRow_titleTextSize, 14f);
+        childId = ta.getResourceId(R.styleable.ExpandRow_child_id, -1);
+        endIconOpen = ta.getResourceId(R.styleable.ExpandRow_endIconOpen, R.drawable.ic_open);
+        dividerColor = ta.getResourceId(R.styleable.ExpandRow_dividerColor, R.color.black);
+        titleTextColor = ta.getResourceId(R.styleable.ExpandRow_titleTextColor, R.color.black);
+        startIconTint = ta.getResourceId(R.styleable.ExpandRow_startIconColor, -1);
+        headerBackground = ta.getResourceId(R.styleable.ExpandRow_headerBackground, headerBackground);
+        endIconColor = ta.getResourceId(R.styleable.ExpandRow_endIconColor, R.color.black);
+        clickAnyPositionToOpen = ta.getBoolean(R.styleable.ExpandRow_clickAnyPositionToOpen, false);
+        showDivider = ta.getBoolean(R.styleable.ExpandRow_showDivider, true);
 
 
         createView();
